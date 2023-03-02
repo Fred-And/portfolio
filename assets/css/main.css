@@ -178,6 +178,17 @@ body {
     animation: scroll-wheel 2.0s linear infinite;
   }
 
+  .finger{
+    display: none;
+  }
+
+  .scroll-down{
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: 50%;
+
+  }
+
   @keyframes scroll-wheel {
     0% {
         opacity: 1;
@@ -190,11 +201,17 @@ body {
     }
   }
 
+  .data-science{
+    height: 900px;
+    background-color: aliceblue;
+
+  }
+
   .data-science-title{
     display: block;
     margin-top: 0px;
     position: relative;
-    text-align: start;
+    text-align: center;
     width: 100%;
     background-color: #101116;
     color: #4661FA;
@@ -207,13 +224,25 @@ body {
     display: inline;
   }
 
-  .data-science{
-    height: 1070px;
-    background-color: aliceblue;
+  .sales{
+    width: 100%;
+    height: 100%;
   }
+
+  
+  
 
   /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
+
+  .content{
+    height: 900px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+    }
     .content h1 {
         font-size: 60px;
     
@@ -221,6 +250,126 @@ body {
     .content p {
         font-size: 20px;
         margin-bottom: 20px;
+    }
+
+    .card {
+      margin-top: 110px;
+      background: #101116;
+      width: 100%;
+      height: 350px;
+      padding: 3px;
+      position: relative;
+      border-radius: 6px;
+      justify-content: start;
+      align-items: start;
+      text-align: start;
+      display: flex;
+      font-size: 1.5em;
+      color: white;
+      cursor: pointer;
+      font-family: cursive;
+    }
+    .card::before {
+      content: "";
+      width: 102%;
+      height: 102%;
+      border-radius: 8px;
+      background-image: linear-gradient(
+        var(--rotate)
+        , #5ddcff, #3c67e3 43%, #4e00c2);
+        position: absolute;
+        z-index: -1;
+        top: -1%;
+        left: -1%;
+        animation: spin 5.5s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% {
+        --rotate: 0deg;
+      }
+      100% {
+        --rotate: 360deg;
+      }
+    }
+  
+    .card-text{
+      padding: 30px;
+      font-size: 40px;
+      line-height: 45px;
+    }
+  
+    .card-text span {
+      border-radius: 10px;
+      padding: 5px;
+      background-color: #4661FA;
+      color: white;
+    }
+
+    .data-science{
+      height: 1700px;
+      background-color: aliceblue;
+    }
+
+    #ds-pro{
+      padding: 0;
+      width: 300px;
+      height: 100%;
+    }
+
+    .indicator{
+      display: none;
+      margin-top: 80px;
+      border-radius: 30px;
+      border-color: white;
+      border: solid;
+      width: 50px;
+      height: 80px;
+    }
+  
+    .scroll-wheel{
+      display: none;
+      margin-top: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      background-color: white;
+      /* animation: scroll-wheel 2.0s linear infinite; */
+    }
+
+    .finger-div{
+      margin-top: 30px;
+      width: 80px;
+      height: 60px;
+      margin-bottom: 20px;
+    }
+  
+    .finger{
+      height: 60px;
+      display: inline-block;
+      animation: scroll-wheel 2.0s linear infinite;
+    }
+  
+    .scroll-down{
+      margin-top: 20px;
+      font-size: 20px;
+      opacity: 50%;
+  
+    }
+  
+    @keyframes scroll-wheel {
+      0% {
+          opacity: 0.5;
+          top: 30px;
+      }
+      75%{
+        opacity: 0;
+      }
+      100% {
+          opacity: 0;
+          margin-top: 30px;
+          transform: scale(0.8);
+      }
     }
   }
 
